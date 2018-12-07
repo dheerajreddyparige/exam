@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Login</title>
+
+<style type="text/css">
+.btn{
+
+	padding: 5px 7px 5px 7px;
+	background-color:  #3384FF;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+}
+.btn:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+background{
+	 filter: blur(80px);
+  -webkit-filter: blur(80px);
+  }
+body{
+	background-image: url("4.jpg");
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+	background-size: cover;
+}
+h2{
+		color: white;
+}
+..
+</style>
+<script type="text/javascript">
+function chkEmpty()
+{
+var uname=/[a-zA-Z]{5,20}$/;
+if(document.frmReg.txtUserName.value =="")
+{
+	alert("Please Enter Username");
+}
+
+
+else if (uname.test(document.frmReg.txtUserName.value) == false) { alert("Please enter valid Name with min 5 letters");}
+
+else if(document.frmReg.txtPassword.value =="")
+{
+	alert("Please Enter Password");
+}
+else if(document.frmReg.txtUserName.value =="Admin" &&  document.frmReg.txtPassword.value=="Admin")
+{
+	window.location="adminHome.html";
+}
+else{
+	alert("Please Enter Valid User Id and Password");
+}
+}
+</script>
+</head>
+<body style="background-color: #d9d9d9;">
+<div align= "center" style=" background-color:#4d79ff; color:white; font-style: bolder; font-family: Garamond; font-size: 40px; padding: 15px; " >
+Capstore
+
+</div>
+
+<form action="adminHome.html" name="frmReg" align="center" method="post" >
+	<h2 colspan=3  align="center">Admin Login</h2>
+	   <table  align="center"  style="font-family:Arial;   font-size: 17px; background-color: white " >
+        
+		<tr>
+		<td><br></td>
+		<td><br></td>
+		</tr>
+		
+          <tr>
+                <td  colspan=2  align="left"> <b>User Name* : </b></td>
+                <td><input type="text" class="Format1" id ="txtUserName" name="UName" pattern="[A-Z][a-z]{2,30}" /></td>
+           	
+
+		</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+		<tr>
+                <td colspan=2 align="left"><b>Password* :</b></td>
+                <td><input type="password" name="Password" id ="txtPassword"   /></td>
+		<td> </td>
+            </tr>
+           <br>       
+			<tr>
+                <td colspan=6 align="center"> <br>  <br>
+				<input type="button" id ="btnRegister" class="btn" value = "Login" onclick=chkEmpty()>
+
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			   </td>
+            </tr>
+           </table>
+
+       </form>
+	 
+
+
+
+</body>
+</html>
